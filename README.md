@@ -1,6 +1,10 @@
 # Azure GitOps Platform
 
-This project simulates a **real-world GitOps deployment pipeline on Azure**, featuring:
+This is a simulation of a production-grade GitOps architecture built on Azure.
+
+It separates application delivery and platform infrastructure using real CI/CD pipelines, ArgoCD App-of-Apps pattern, and a RAG-based FastAPI service.
+The system is built to simulate how senior engineers orchestrate versioned deploys, platform control planes, and modular Kubernetes environments in the real world.
+Everything runs on AKS, integrated with Azure OpenAI for retrieval-augmented responses.
 
 - ✅ **App Code**: RAG-based FastAPI backend (optionally with a frontend)
 - ✅ **Delivery Pipelines**: Builds Docker images + Helm charts
@@ -42,12 +46,15 @@ This project simulates a **real-world GitOps deployment pipeline on Azure**, fea
 
 ## 💡 Why This Project?
 
-Most GitOps tutorials are toy examples or mix concerns. This repo simulates **how real engineering orgs separate app and infra pipelines**, using:
+Most GitOps walkthroughs break under real-world constraints. They mix app code with infra, hardcode secrets, or ignore modular deploy patterns.
+This project pressure-tests separation of delivery pipelines and platform orchestration using:
 
-- 2 monorepos (`app`, `infra`)
-- GitOps deployment control
-- Chart versioning strategy
-- ArgoCD Application modularity
+- 🧱 2 monorepos for clean team boundaries (`app`, `infra`)
+- 🔁 Chart versioning + OCI pushes for rollback control
+- 🔁 ArgoCD App-of-Apps to simulate platform-scale deployment logic
+- 📈 CI-built Helm charts + Docker images for immutable delivery
+
+It’s not a sandbox. It’s a prototype for production-grade reproducibility.
 
 ---
 
