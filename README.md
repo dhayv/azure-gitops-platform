@@ -13,8 +13,8 @@ This project simulates a **real-world GitOps deployment pipeline on Azure**, fea
 
 | Repo | Purpose |
 |------|---------|
-| [`rag-app`](https://github.com/YOUR_USERNAME/rag-app) | Application source code, Helm chart, CI pipelines |
-| [`rag-infra`](https://github.com/YOUR_USERNAME/rag-infra) | ArgoCD manifests, GitOps controller, App-of-Apps |
+| [`rag-app`](https://github.com/dhayv/azure-rag-app) | Application source code, Helm chart, CI pipelines |
+| [`rag-infra`](https://github.com/dhayv/azure-rag-infra) | ArgoCD manifests, GitOps controller, App-of-Apps |
 
 ---
 
